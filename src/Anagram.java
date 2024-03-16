@@ -5,7 +5,7 @@ public class Anagram {
 
   public Boolean checkAnagram(String a, String b) {
     if (a.length() != b.length()) {
-      return false
+      return false;
     }
     Map<Character, Integer> d1 = new HashMap<>();
     Map<Character, Integer> d2 = new HashMap<>();
@@ -15,14 +15,11 @@ public class Anagram {
       for (char x : b.toCharArray()) {
         d2.put(x, d2.getOrDefault(x, 0) + 1);
         if (d1.equals(d2)) {
-          return true
+          return true;
         }
-        return false
-
       }
-
-
     }
+    return false;
   }
 
   public boolean isAnagram(String s, String t) {
